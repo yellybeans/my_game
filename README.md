@@ -39,6 +39,3 @@ Todos:
 - UI
   - Map
   - Inventory
-
-Issues:
-
