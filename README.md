@@ -11,7 +11,7 @@ Cons:
 3. Einschränkung, da mages entweder nicht viable oder komplett op
 
 Todos:
-- Tree Boss AoE Skill
+- Alex: Tree Boss AoE Skill
 
 - World
   - Town
