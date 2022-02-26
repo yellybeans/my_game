@@ -26,7 +26,7 @@ onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtboxes
 
-func _ready():#
+func _ready():
 	stats.connect("no_health",self,"queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
