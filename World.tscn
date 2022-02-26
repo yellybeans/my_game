@@ -1027,16 +1027,13 @@ position = Vector2( 210, 535 )
 position = Vector2( 976, 575 )
 
 [node name="AniSprite" parent="YSort/BossBat" index="0"]
-frame = 2
+frame = 4
 
 [node name="Stats" parent="YSort/BossBat" index="4"]
 max_health = 10
 
 [node name="BossBat3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 705, 23 )
-
-[node name="AniSprite" parent="YSort/BossBat3" index="0"]
-frame = 4
 
 [node name="Stats" parent="YSort/BossBat3" index="4"]
 max_health = 10
@@ -1047,9 +1044,6 @@ damage = 2
 [node name="BossBat2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 126, 22 )
 scale = Vector2( 2, 2 )
-
-[node name="AniSprite" parent="YSort/BossBat2" index="0"]
-frame = 4
 
 [node name="CollisionShape2D" parent="YSort/BossBat2" index="2"]
 visible = true
@@ -1063,9 +1057,6 @@ damage = 2
 [node name="BossBat4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 890, 50 )
 MINIMAL_WANDER_RANGE = 10
-
-[node name="AniSprite" parent="YSort/BossBat4" index="0"]
-frame = 4
 
 [node name="Stats" parent="YSort/BossBat4" index="4"]
 max_health = 6
