@@ -35,24 +35,19 @@ func _physics_process(delta):
 	knockback = move_and_slide(knockback)
 	match state:
 		IDLE:
-			print("IDLE")
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			seek_player()
 			if wanderController.get_time_left() == 0:
 				update_wander()
 			animationState.travel("idle")
 		WANDER:
-			print("WANDER")
 			seek_player()
 			if wanderController.get_time_left() == 0:
 				update_wander()
 			accelerate_towards_point(wanderController.target_position, delta)
-			#print(global_position.distance_to(wanderController.target_position))
 			if global_position.distance_to(wanderController.target_position) <= MINIMAL_WANDER_RANGE:
-				#print("im in")
 				update_wander()
 		CHASE:
-			print("CHASING")
 			var player = playerDetectionZone.player
 			if player != null:
 				 accelerate_towards_point(player.global_position, delta)
