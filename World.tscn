@@ -2,9 +2,9 @@
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/GrassBackground.png" type="Texture" id=3]
-[ext_resource path="res://Assets/DirtTileset.png" type="Texture" id=4]
-[ext_resource path="res://Assets/CliffTileset.png" type="Texture" id=5]
+[ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://Assets/World/DirtTileset.png" type="Texture" id=4]
+[ext_resource path="res://Assets/World/CliffTileset.png" type="Texture" id=5]
 [ext_resource path="res://World/Grass.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemies/Bat.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/HealthUI.tscn" type="PackedScene" id=8]
@@ -1026,9 +1026,6 @@ position = Vector2( 210, 535 )
 [node name="BossBat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 976, 575 )
 
-[node name="AniSprite" parent="YSort/BossBat" index="0"]
-frame = 0
-
 [node name="Stats" parent="YSort/BossBat" index="4"]
 max_health = 10
 
@@ -1036,7 +1033,7 @@ max_health = 10
 position = Vector2( 705, 23 )
 
 [node name="AniSprite" parent="YSort/BossBat3" index="0"]
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/BossBat3" index="4"]
 max_health = 10
@@ -1049,7 +1046,7 @@ position = Vector2( 126, 22 )
 scale = Vector2( 2, 2 )
 
 [node name="AniSprite" parent="YSort/BossBat2" index="0"]
-frame = 2
+frame = 3
 
 [node name="CollisionShape2D" parent="YSort/BossBat2" index="2"]
 visible = true
@@ -1065,7 +1062,7 @@ position = Vector2( 890, 50 )
 MINIMAL_WANDER_RANGE = 10
 
 [node name="AniSprite" parent="YSort/BossBat4" index="0"]
-frame = 2
+frame = 3
 
 [node name="Stats" parent="YSort/BossBat4" index="4"]
 max_health = 6
