@@ -10,8 +10,7 @@ Cons:
 2. Hidden Recipes muss man kennen, werden z.T. NIE gespoilert
 3. Einschränkung, da mages entweder nicht viable oder komplett op
 
-Todos:
-- Alex: Tree Boss AoE Skill
+General thoughts on what to do:
 
 - World
   - Town
