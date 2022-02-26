@@ -32,6 +32,7 @@ config/icon="res://Assets/icon.png"
 
 [autoload]
 
+ItemDatabase="*res://Managers/ItemDatabase.gd"
 PlayerStats="*res://Player/PlayerStats.tscn"
 
 [display]
