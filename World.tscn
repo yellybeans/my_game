@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://World.gd" type="Script" id=10]
 [ext_resource path="res://UI/InventoryContainer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemies/TreeBoss.tscn" type="PackedScene" id=12]
+[ext_resource path="res://World/Chest.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -535,6 +536,9 @@ position = Vector2( 20, 541 )
 position = Vector2( 1, -1 )
 remote_path = NodePath("../../../Camera2D")
 
+[node name="Chest" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 553, 474 )
+
 [node name="Bushes2" type="YSort" parent="YSort"]
 
 [node name="Bush7" parent="YSort/Bushes2" instance=ExtResource( 2 )]
@@ -1026,6 +1030,9 @@ position = Vector2( 210, 535 )
 [node name="BossBat" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 976, 575 )
 
+[node name="AniSprite" parent="YSort/BossBat" index="0"]
+frame = 0
+
 [node name="Stats" parent="YSort/BossBat" index="4"]
 max_health = 10
 
@@ -1033,7 +1040,7 @@ max_health = 10
 position = Vector2( 705, 23 )
 
 [node name="AniSprite" parent="YSort/BossBat3" index="0"]
-frame = 3
+frame = 2
 
 [node name="Stats" parent="YSort/BossBat3" index="4"]
 max_health = 10
@@ -1046,7 +1053,7 @@ position = Vector2( 126, 22 )
 scale = Vector2( 2, 2 )
 
 [node name="AniSprite" parent="YSort/BossBat2" index="0"]
-frame = 3
+frame = 2
 
 [node name="CollisionShape2D" parent="YSort/BossBat2" index="2"]
 visible = true
@@ -1062,7 +1069,7 @@ position = Vector2( 890, 50 )
 MINIMAL_WANDER_RANGE = 10
 
 [node name="AniSprite" parent="YSort/BossBat4" index="0"]
-frame = 3
+frame = 2
 
 [node name="Stats" parent="YSort/BossBat4" index="4"]
 max_health = 6
