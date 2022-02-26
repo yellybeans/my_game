@@ -8,6 +8,6 @@ export_presets.cfg
 .mono/
 data_*/
 
-# specific ignores
+# specific custom ignores
 *.import
 *.aseprite
