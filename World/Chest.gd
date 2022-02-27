@@ -8,5 +8,7 @@ func _on_Chest_body_entered(body):
 	if body == player:
 		print("Juhuu")
 		inventory.add_item("Shield")
+		inventory.add_item("Sword")
+		inventory.add_item("Ring")
+		inventory.add_item("LongSword")
 		queue_free()
-		#inventoryDisplay.pick_up_item(ItemDatabase.get_item("Shield"))

@@ -826,7 +826,6 @@ shape = SubResource( 40 )
 disabled = true
 
 [node name="Hurtboxes" parent="." instance=ExtResource( 5 )]
-visible = false
 collision_layer = 4
 
 [node name="CollisionShape2D" parent="Hurtboxes" index="0"]

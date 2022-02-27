@@ -88,8 +88,8 @@ func roll_animation_finished():
 	velocity = velocity * 0.8
 	state = MOVE
 	
-func _on_Hurtboxes_area_entered(_area):
-	stats.health -= 1
+func _on_Hurtboxes_area_entered(area):
+	stats.health -= area.damage
 	hurtbox.start_invincibility(0.5)
 	hurtbox.create_hit_effect()
 	var playerHurtSound = PlayerHurtSound.instance()

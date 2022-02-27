@@ -13,7 +13,6 @@ func _ready():
 func init_inventory():
 	for item_index in inventory.items.size():
 		update_inventory_slot_display(item_index)
-		update_inventory_slot_stat(item_index)
 
 #update visuals of item swap
 func update_inventory_slot_display(item_index):
@@ -21,17 +20,6 @@ func update_inventory_slot_display(item_index):
 	var item = inventory.items[item_index]
 	inventorySlot.display_item(item)
 
-#update stats from new item
-func update_inventory_slot_stat(item_index):
-	var inventorySlot = get_child(item_index)
-	var item = inventory.items[item_index]
-	print("update item get")
-	inventorySlot.get_bonuses_from_item(item)
-
-#new item added
-func _on_item_added_in_position(index):
-	update_inventory_slot_stat(index)
-	
 # items swapped
 func _on_item_position_changed(indexes):
 	print("item position changed")
