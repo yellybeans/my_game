@@ -7,6 +7,7 @@
 script = ExtResource( 2 )
 name = "Sword"
 texture = ExtResource( 1 )
-Damage_bonus = 1
+Itemtype = 3
+damage_bonus = 1
 health_bonus = 0
 heal_power = 0

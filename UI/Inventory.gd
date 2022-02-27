@@ -23,7 +23,6 @@ func swap_item(item_index, target_item_index):
 	items[item_index] = targetItem
 	emit_signal("items_changed",[item_index,target_item_index])
 	
-
 func remove_item(item_index):
 	var previousItem = items[item_index]
 	items[item_index] = null
@@ -38,8 +37,21 @@ func add_item(item_name):
 		return
 	for i in items.size():
 		if not items[i]:
+			print(items)
 			set_item(i, item)
+			item.apply_bonus()
 			emit_signal("item_added",i)
 			print("item slot set")
 			return
 	return
+	
+func drop_item(item):
+	print("removing item")
+	item.remove_bonus()
+	#remove_item(item_index)
+	#emit_signal("item_added",i)
+	print("item removed")
+	return
+
+	
+	

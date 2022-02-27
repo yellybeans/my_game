@@ -16,21 +16,21 @@ func display_item(item):
 func add_item(item):
 	print("adding item into slot")
 	display_item(item)
-	get_bonuses_from_item(item)
+	#get_bonuses_from_item(item)
 	#inventory.set_item(my_item_index, data.item)
 	
-func get_bonuses_from_item(item):
-	if item is Item :
-		stats.max_health += item.health_bonus
-		stats.health += item.health_bonus
+#func get_bonuses_from_item(item):
+#	if item is Item :
+#		stats.max_health += item.health_bonus
+#		stats.health += item.health_bonus
 
-func drop_item(item):
-	remove_bonuses_for_item(item)
-
-func remove_bonuses_for_item(item):
-	if item is Item :
-		stats.health -= item.health_bonus
-		stats.max_health -= item.health_bonus
+#func drop_item(item):
+#	remove_bonuses_for_item(item)
+#
+#func remove_bonuses_for_item(item):
+#	if item is Item:
+#		stats.health -= item.health_bonus
+#		stats.max_health -= item.health_bonus
 
 ## moving items
 func get_drag_data(_position): # pick up item from slot

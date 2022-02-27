@@ -14,4 +14,4 @@ func drop_data(_position, data): # drop item inside of inventory container (inve
 func _unhandled_input(event): # critical due to permanently triggered !!!!!
 	if event.is_action_released("ui_left_mouse"):
 		if inventory.drag_data is Dictionary:
-			inventorySlot.drop_item(inventory.drag_data.item)
+			inventory.drop_item(inventory.drag_data.item)
