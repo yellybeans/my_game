@@ -1031,13 +1031,16 @@ position = Vector2( 210, 535 )
 position = Vector2( 976, 575 )
 
 [node name="AniSprite" parent="YSort/BossBat" index="0"]
-frame = 2
+frame = 1
 
 [node name="Stats" parent="YSort/BossBat" index="4"]
 max_health = 10
 
 [node name="BossBat3" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 705, 23 )
+
+[node name="AniSprite" parent="YSort/BossBat3" index="0"]
+frame = 3
 
 [node name="Stats" parent="YSort/BossBat3" index="4"]
 max_health = 10
@@ -1048,6 +1051,9 @@ damage = 2
 [node name="BossBat2" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 126, 22 )
 scale = Vector2( 2, 2 )
+
+[node name="AniSprite" parent="YSort/BossBat2" index="0"]
+frame = 3
 
 [node name="CollisionShape2D" parent="YSort/BossBat2" index="2"]
 visible = true
@@ -1061,6 +1067,9 @@ damage = 2
 [node name="BossBat4" parent="YSort" instance=ExtResource( 7 )]
 position = Vector2( 890, 50 )
 MINIMAL_WANDER_RANGE = 10
+
+[node name="AniSprite" parent="YSort/BossBat4" index="0"]
+frame = 3
 
 [node name="Stats" parent="YSort/BossBat4" index="4"]
 max_health = 6
@@ -1077,6 +1086,9 @@ margin_right = 236.0
 margin_bottom = 43.0
 
 [node name="InventoryContainer" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="Tree" parent="." instance=ExtResource( 9 )]
+position = Vector2( 682, 388 )
 
 [editable path="YSort/BossBat"]
 [editable path="YSort/BossBat/Hurtboxes"]
