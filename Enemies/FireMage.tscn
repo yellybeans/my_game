@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Hurtboxes + Hitboxes/Hurtboxes.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Shadows/SmallShadow.png" type="Texture" id=2]
@@ -13,46 +13,6 @@
 [ext_resource path="res://Enemies/FireMage.gd" type="Script" id=11]
 [ext_resource path="res://Assets/Enemies/Evil Wizard/Evil Wizard/Sprites/Attack.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Enemies/Evil Wizard/Evil Wizard/Sprites/Move.png" type="Texture" id=13]
-
-[sub_resource type="AtlasTexture" id=50]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 0, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=51]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 150, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=52]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 300, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=53]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 450, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=54]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 600, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=55]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 750, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=56]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 900, 0, 150, 150 )
-
-[sub_resource type="AtlasTexture" id=57]
-flags = 4
-atlas = ExtResource( 12 )
-region = Rect2( 1050, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=58]
 flags = 4
@@ -92,6 +52,46 @@ region = Rect2( 900, 0, 150, 150 )
 [sub_resource type="AtlasTexture" id=65]
 flags = 4
 atlas = ExtResource( 3 )
+region = Rect2( 1050, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 150, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=52]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 300, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 450, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=54]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 600, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=55]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 750, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=56]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 900, 0, 150, 150 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 12 )
 region = Rect2( 1050, 0, 150, 150 )
 
 [sub_resource type="AtlasTexture" id=66]
@@ -181,14 +181,14 @@ region = Rect2( 450, 0, 150, 150 )
 
 [sub_resource type="SpriteFrames" id=83]
 animations = [ {
-"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 58 ), SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
+"loop": true,
+"name": "Attack",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
@@ -237,6 +237,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=36]
 resource_name = "attack"
 length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -265,6 +266,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=37]
 resource_name = "death"
 length = 0.5
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -293,6 +295,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=34]
 resource_name = "idle"
 length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -321,6 +324,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=35]
 resource_name = "move"
 length = 0.8
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -349,6 +353,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=38]
 resource_name = "takeHit"
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:animation")
 tracks/0/interp = 1
@@ -374,44 +379,47 @@ tracks/1/keys = {
 "values": [ 0, 1, 2, 3, 3 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=39]
+[sub_resource type="AnimationNodeAnimation" id=90]
+animation = "attack"
+
+[sub_resource type="AnimationNodeAnimation" id=91]
+animation = "death"
+
+[sub_resource type="AnimationNodeAnimation" id=86]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=40]
-animation = "runLeft"
+[sub_resource type="AnimationNodeAnimation" id=87]
+animation = "move"
 
-[sub_resource type="AnimationNodeAnimation" id=41]
-animation = "runRight"
+[sub_resource type="AnimationNodeAnimation" id=92]
+animation = "takeHit"
 
-[sub_resource type="AnimationNodeAnimation" id=42]
-animation = "runDown"
+[sub_resource type="AnimationNodeStateMachineTransition" id=88]
 
-[sub_resource type="AnimationNodeAnimation" id=43]
-animation = "runUp"
+[sub_resource type="AnimationNodeStateMachineTransition" id=89]
 
-[sub_resource type="AnimationNodeBlendSpace2D" id=44]
-blend_point_0/node = SubResource( 40 )
-blend_point_0/pos = Vector2( -1, 0 )
-blend_point_1/node = SubResource( 41 )
-blend_point_1/pos = Vector2( 1, 0 )
-blend_point_2/node = SubResource( 42 )
-blend_point_2/pos = Vector2( 0, 1.1 )
-blend_point_3/node = SubResource( 43 )
-blend_point_3/pos = Vector2( 0, -1.1 )
-min_space = Vector2( -1, -1.1 )
-max_space = Vector2( 1, 1.1 )
-blend_mode = 1
+[sub_resource type="AnimationNodeStateMachineTransition" id=93]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+[sub_resource type="AnimationNodeStateMachineTransition" id=94]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+[sub_resource type="AnimationNodeStateMachineTransition" id=95]
 
-[sub_resource type="AnimationNodeStateMachine" id=47]
-states/idle/node = SubResource( 39 )
-states/idle/position = Vector2( 637, 108 )
-states/run/node = SubResource( 44 )
-states/run/position = Vector2( 390, 108 )
-transitions = [ "idle", "run", SubResource( 45 ), "run", "idle", SubResource( 46 ) ]
+[sub_resource type="AnimationNodeStateMachineTransition" id=96]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=97]
+
+[sub_resource type="AnimationNodeStateMachine" id=85]
+states/attack/node = SubResource( 90 )
+states/attack/position = Vector2( 276, 185 )
+states/death/node = SubResource( 91 )
+states/death/position = Vector2( 144, 54 )
+states/idle/node = SubResource( 86 )
+states/idle/position = Vector2( 414, 54 )
+states/move/node = SubResource( 87 )
+states/move/position = Vector2( 738, 54 )
+states/takeHit/node = SubResource( 92 )
+states/takeHit/position = Vector2( 559, 185 )
+transitions = [ "idle", "move", SubResource( 88 ), "move", "idle", SubResource( 89 ), "idle", "death", SubResource( 93 ), "idle", "takeHit", SubResource( 94 ), "idle", "attack", SubResource( 95 ), "attack", "idle", SubResource( 96 ), "takeHit", "idle", SubResource( 97 ) ]
 start_node = "idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=48]
@@ -434,6 +442,7 @@ height = 4.0
 radius = 6.0
 
 [node name="FireMage" type="KinematicBody2D"]
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 16
 script = ExtResource( 11 )
 
@@ -456,10 +465,10 @@ anims/move = SubResource( 35 )
 anims/takeHit = SubResource( 38 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 47 )
+tree_root = SubResource( 85 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
 parameters/playback = SubResource( 48 )
-parameters/run/blend_position = Vector2( -1, 0.00244987 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

@@ -17,7 +17,7 @@ enum {
 }
 var state = IDLE
 
-onready var sprite = $AniSprite
+onready var sprite = $AnimatedSprite
 onready var stats = $Stats
 onready var playerDetectionZone = $PlayerDetectionZone
 onready var hurtbox = $Hurtboxes
@@ -51,6 +51,7 @@ func _physics_process(delta):
 			var player = playerDetectionZone.player
 			if player != null:
 				 accelerate_towards_point(player.global_position, delta)
+				 
 			else:
 				accelerate_towards_point(wanderController.target_position, delta)
 				if global_position.distance_to(wanderController.target_position) <= MINIMAL_WANDER_RANGE:
@@ -67,8 +68,9 @@ func update_wander():
 func accelerate_towards_point(point, delta):
 	var direction = global_position.direction_to(point)
 	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
-	animationTree.set("parameters/run/blend_position", direction)
-	animationState.travel("run")
+	animationState.travel("move")
+	sprite.flip_h=velocity.x < 0
+
 
 func seek_player():
 	if playerDetectionZone.can_see_player():
@@ -81,10 +83,14 @@ func pick_random_state(state_list):
 func _on_Hurtboxes_area_entered(area):
 	stats.health -= area.damage + PlayerStats.bonus_damage
 	knockback = area.knockback_vector * 115
-	hurtbox.create_hit_effect()
+	animationTree.play("takeHit")
+	#animationState.travel("takeHit")
+	#hurtbox.create_hit_effect()
 
 func _on_Stats_no_health():
+	animationState.travel("death")
+	#yield($AnimationPlayer, "animation_finished")
 	queue_free()
-	var enemyDeathEffect = EnemyDeathEffect.instance()
-	get_parent().add_child(enemyDeathEffect)
-	enemyDeathEffect.global_position = global_position
+	#var enemyDeathEffect = EnemyDeathEffect.instance()
+	#get_parent().add_child(enemyDeathEffect)
+	#enemyDeathEffect.global_position = global_position

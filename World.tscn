@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Assets/Music and Sounds/Music.mp3" type="AudioStream" id=14]
 [ext_resource path="res://Assets/World/tf_darkdimension_updated2020/100/doorA_1.png" type="Texture" id=15]
 [ext_resource path="res://Assets/World/tf_darkdimension_updated2020/100/tf_dd_A5_1.png" type="Texture" id=16]
+[ext_resource path="res://Enemies/FireMage.tscn" type="PackedScene" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -1305,6 +1306,9 @@ items = PoolStringArray( "Sword", "Shield" )
 stream = ExtResource( 14 )
 volume_db = -10.0
 mix_target = 1
+
+[node name="FireMage" parent="." instance=ExtResource( 17 )]
+position = Vector2( 563, 469 )
 
 [editable path="YSort/BossBat"]
 [editable path="YSort/BossBat/Hurtboxes"]
