@@ -54,7 +54,7 @@ height = 4.0
 radius = 120.017
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 6.0
+radius = 10.5091
 
 [sub_resource type="CircleShape2D" id=11]
 radius = 8.06226
@@ -66,7 +66,6 @@ script = ExtResource( 4 )
 [node name="AniSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 6 )
 animation = "fly"
-frame = 4
 playing = true
 offset = Vector2( 0, -12 )
 
